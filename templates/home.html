@@ -1,0 +1,231 @@
+<html lang="en">
+<body>
+    <div class="login">
+        <h1> Bank Term Deposit Prediction</h1>
+
+        <form action="{{ url_for('predict_depost')}}" method="post">
+            <h2>
+                <legend> Term Deposit</legend>
+            </h2>
+
+
+            <div class="mb-3">
+                <label class="form-label">Age</label>
+                <input class="form-control" type ="number" name="age" placeholer="Enter Client's age" min="18" max="100" required/>
+            </div>
+
+
+
+            <div class="mb-3">
+                <label class="form-label">Job</label>
+                <select class="form-control" name="job" placeholer="Enter job" required>
+                    <option class="placeholder" selected disabled value=""> Select Type of Job</option>
+                    <option value="management">
+                        management
+                    </option>
+                    <option value="blue-collar">
+                        blue-collar
+                    </option>
+                    <option value="technician">
+                        technician
+                    </option>
+                    <option value="admin.">
+                        admin.
+                    </option>
+                    <option value="services">
+                        services
+                    </option>
+                    <option value="retired">
+                        retired
+                    </option>
+                    <option value="others">
+                        others
+                    </option>
+            
+                </select>
+
+
+
+                <div class="mb-3">
+                    <label class="form-label">Marital Status</label>
+                    <select class="form-control" name="marital" placeholer="Enter marital" required>
+                        <option class="placeholder" selected disabled value=""> Select marital status</option>
+                        <option value="married">
+                            married
+                        </option>
+                        <option value="single">
+                            single
+                        </option>
+                        <option value="divorced">
+                            divorced
+                        </option>
+                    </select>
+                </div>
+
+
+
+                <div class="mb-3">
+                    <label class="form-label">Education</label>
+                    <select class="form-control" name="education" placeholer="Enter education" required>
+                        <option class="placeholder" selected disabled value=""> Select education</option>
+                        <option value="secondary">
+                            secondary
+                        </option>
+                        <option value="tertiary">
+                            tertiary
+                        </option>
+                        <option value="primary">
+                            primary
+                        </option>
+                        <option value="unknown">
+                            unknown
+                        </option>
+                    </select>
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Default</label>
+                    <select class="form-control" name="default" placeholer="Enter default" required>
+                        <option class="placeholder" selected disabled value=""> Has credit in default ?</option>
+                        <option value="yes">
+                            yes
+                        </option>
+                        <option value="no">
+                            no
+                        </option>
+                    </select>
+                </div>
+
+
+
+            <div class="mb-3">
+                <label class="form-label">Average Yearly Balance</label>
+                <input class="form-control" type ="number" name="balance" placeholer="Enter balance" min="-10000" max="100000" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Housing</label>
+                <select class="form-control" name="housing" placeholer="Enter housing" required>
+                    <option class="placeholder" selected disabled value=""> Does client has house?</option>
+                    <option value="yes">
+                        yes
+                    </option>
+                    <option value="no">
+                        no
+                    </option>
+                </select>
+            </div>
+
+
+
+            <div class="mb-3">
+                <label class="form-label">Loan</label>
+                <select class="form-control" name="loan" placeholer="Enter loan" required>
+                    <option class="placeholder" selected disabled value=""> Does client has personal loan?</option>
+                    <option value="yes">
+                        yes
+                    </option>
+                    <option value="no">
+                        no
+                    </option>
+                </select>
+            </div>
+
+
+
+            <div class="mb-3">
+                <label class="form-label">Contact Type</label>
+                <select class="form-control" name="contact" placeholer="Enter contact" required>
+                    <option class="placeholder" selected disabled value=""> Contact communication type</option>
+                    <option value="cellular">
+                        cellular
+                    </option>
+                    <option value="unknown">
+                        unknown
+                    </option>
+                    <option value="telephone">
+                        telephone
+                    </option>
+                </select>
+            </div>
+
+
+
+
+            <div class="mb-3">
+                <label class="form-label">Last Contact Day of the Month</label>
+                <input class="form-control" type ="number" name="day" placeholer="Enter day" min="1" max="31" required/>
+            </div>
+
+
+
+            <div class="mb-3">
+                <label class="form-label">Month of Contact</label>
+                <input class="form-control" type ="number" name="month" placeholer="Enter month" min="1" max="12" required/>
+            </div>
+
+
+
+
+            <div class="mb-3">
+                <label class="form-label">Last Contact Duration (in sec) </label>
+                <input class="form-control" type ="number" name="duration" placeholer="Enter Duration" min="2" max="4000" required/>
+            </div>
+
+
+
+            <div class="mb-3">
+                <label class="form-label">Number of Contact Performaed in Current Campaign</label>
+                <input class="form-control" type ="number" name="campaign" placeholer="Enter campaign" min="1" max="65" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Number of Days Passed from Last Contacted Day</label>
+                <input class="form-control" type ="number" name="pdays" placeholer="Enter pdays" min="-1" max="900" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Number of Contact Performed in Previous Campaign</label>
+                <input class="form-control" type ="number" name="previous" placeholer="Enter previous" min="0" max="60" required/>
+            </div>
+
+
+
+    
+            <div class="mb-3">
+                <label class="form-label">Outcome of Previous Campaign</label>
+                <select class="form-control" name="poutcome" placeholer="Enter poutcome" required>
+                    <option class="placeholder" selected disabled value=""> Select outcome</option>
+                    <option value="unknown">
+                        unknown
+                    </option>
+                    <option value="failure">
+                        failure
+                    </option>
+                    <option value="success">
+                        success
+                    </option>
+                    <option value="other">
+                        other
+                    </option>
+                </select>
+            </div>
+
+
+
+            <div class="mb-3">
+                <input class="btn btn-primary" type ="submit" value="Predict Term Deposit" required />
+    
+            </div>
+        </form>
+
+        <h2>
+
+            Result : {{results}}
+        </h2>
+    </body>
+</html>
