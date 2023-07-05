@@ -29,8 +29,6 @@ The data is related to the direct marketing campaigns of a Portuguese banking in
 ## 🚀 About Me 
 I'm a passionate data scientist who is actively learning the use of Data Science and Machine Learning is the field of Finance.
 
-## Dataset Link
-https://www.kaggle.com/datasets/clkmuhammed/creditscoreclassification
 
 
 ## 🔗 Links
